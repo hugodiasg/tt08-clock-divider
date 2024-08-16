@@ -25,7 +25,7 @@ module tt_um_hugodg_clock_divider(
     wire _unused = &{ena, 1'b0};
 
   // Instantiating the project
-clock_divider_inst clock_divider(
+clock_divider clock_divider_inst(
     .clk_in(clk),
     .nrst(rst_n),
     .scale(ui_in[7:0]),
