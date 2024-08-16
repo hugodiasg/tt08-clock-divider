@@ -9,12 +9,15 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This design is a clock divider. It receives a byte at its input (scale {ui_in[7:0]}), calculates true_scale = scale*CONST (CONST = 258000) and the clock frequency at the input is divided (clk_out {uo_out[0]} = clk_in {clk} / true_scale). If the scale is set to 0, the clk_in is just repeated at the clk_out. With scale = 1111_1111, it is possible to achieve true_scale ≈ 66e6.
 
 ## How to test
 
-Explain how to use your project
+- Scale = choose a byte
+- Connect clk_in to a clock signal
+- Do the nrst to reset
+- Observe the clock signal with the frequency divided into clk_out
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Signal generator to generate `clk_in` and a oscilloscope to see the `clk_out`. And switches or some microcontroler to set `scale[7:0]`.
