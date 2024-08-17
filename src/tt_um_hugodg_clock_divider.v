@@ -22,7 +22,7 @@ module tt_um_hugodg_clock_divider (
     assign uo_out[7:1] = 0; 
 
   // List all unused inputs to prevent warnings
-    wire _unused = &{ena, 1'b0};
+    wire _unused = &{ena, uio_in[7:0],1'b0};
 
   // Instantiating the project
 clock_divider clock_divider_inst(
