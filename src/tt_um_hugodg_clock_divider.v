@@ -2,7 +2,7 @@
  * Copyright (c) 2024 Your Name
  * SPDX-License-Identifier: Apache-2.0
  */
-`include "clock_divider.v"
+
 `default_nettype none
 
 module tt_um_hugodg_clock_divider (
