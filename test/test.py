@@ -29,7 +29,7 @@ async def test_adder(dut):
   dut._log.info("Test")
 
   # While to check if the clock is being divided
-  CONST = 258000 # it should be equal to the CONST of src/clock_divider.v
+  CONST =  258850 # it should be equal to the CONST of src/clock_divider.v
   cycles = 0
   while True:
     await ClockCycles(dut.clk,1)
