@@ -8,8 +8,8 @@ module clock_divider
   output clk_out 
 );
   integer count; // counter
-  // integer CONST = 258830 // to convert 66 Mhz to 1 Hz with scale = 1111_1111
-  integer CONST = 392160 // to convert 100 Mhz to 1 Hz with scale = 1111_1111
+  // integer CONST = 258830; // to convert 66 Mhz to 1 Hz with scale = 1111_1111
+  integer CONST = 392160; // to convert 100 Mhz to 1 Hz with scale = 1111_1111
   reg [31:0] true_scale; // the 'true' scale defined as 'scale * CONST'
   reg signal_clk_out; // register to save the clk_out and send it to this port
 
