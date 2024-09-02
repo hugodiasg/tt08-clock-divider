@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This design is a clock divider. It receives a byte at its input (scale {ui_in[7:0]}), calculates true_scale = scale*CONST (CONST = 258000) and the clock frequency at the input is divided (clk_out {uo_out[0]} = clk_in {clk} / true_scale). If the scale is set to 0, the clk_in is just repeated at the clk_out. With scale = 1111_1111, it is possible to achieve true_scale ≈ 66e6.
+This design is a clock divider. It receives a byte at its input (scale {ui_in[7:0]}), calculates true_scale = scale*CONST (CONST = 392160) and the clock frequency at the input is divided (clk_out {uo_out[0]} = clk_in {clk} / true_scale). If the scale is set to 0, the clk_in is just repeated at the clk_out. With scale = 1111_1111, it is possible to achieve true_scale ≈ 66e6.
 
 ## How to test
 
